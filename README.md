@@ -71,4 +71,7 @@ Diplays stdout log of the running container
 Initial release of homebridge-docker
 ###0.11
 moved from nodesource/jessie:5.8.0 to debian:stretch
+###0.12
+Reverted back to nodesource/jessie
+###
 updated versions
