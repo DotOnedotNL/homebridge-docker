@@ -16,7 +16,7 @@ fi
 
 _build() {
   # Build
-  docker build --tag="cbrandlehner/homebridge:$VERSION" .
+  docker build --tag="DotOnedotNL/homebridge-docker:$VERSION" .
 }
 
 _run() {
