@@ -1,5 +1,5 @@
-FROM debian:stretch
-#FROM nodesource/jessie
+#FROM debian:stretch
+FROM nodesource/jessie
 #FROM nodesource/jessie:5.8.0
 MAINTAINER Andre Vink <andre@dotone.nl>
 
@@ -20,9 +20,9 @@ RUN apt-get install -y apt-transport-https
 RUN apt-get install -y locales
 RUN apt-get install -y curl wget git python build-essential make g++ libavahi-compat-libdnssd-dev libkrb5-dev vim net-tools nano
 
-# Install Node.js
-RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
-RUN apt-get install -y nodejs
+# Install Node.js - required for debian:stretch
+# RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
+# RUN apt-get install -y nodejs
 
 RUN alias ll='ls -alG'
 
