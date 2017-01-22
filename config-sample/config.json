@@ -1,0 +1,67 @@
+{
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:21:3E:E4:DE:33",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+    "description": "Configuration file for (e)xtended Domoticz platform.",
+    "platforms": [
+        {
+            "platform": "eDomoticz",
+            "name": "eDomoticz",
+            "server": "127.0.0.1",
+            "port": "8080",
+            "ssl": 1,
+            "roomid": 0,
+            "mqttenable": 1,
+            "mqttserver": "127.0.0.1",
+            "mqttport": "1883",
+            "mqttauth": 0,
+            "mqttuser": "",
+            "mqttpass": ""
+        }
+
+        {
+        "platform": "People",
+        "threshold" : 15, // (optional, in minutes, default: 15)
+        "anyoneSensor" : true, // (optional, default: true)
+        "nooneSensor" : false, // (optional, default: false)
+        "webhookPort": 51828, // (optional, default: 51828)
+        "cacheDirectory": "./.node-persist/storage", // (optional, default: "./.node-persist/storage")
+        "pingInterval": 10000,  // (optional, in milliseconds, default: 10000, if set to -1 than the ping mechanism will not be used)
+        "ignoreReEnterExitSeconds": 0,  // (optional, in minutes, default: 0, if set to 0 than every enter/exit will trigger state change otherwise the state will only change if no re-enter/exit occurs in specified number of seconds)
+        "people" : [
+            {
+                "name" : "Andre", 
+                "target" : "iPhone-Andre",
+                "threshold" : 15, // (optional, in minutes, default: used from platform
+                "pingInterval": 10000,  // (optional, in milliseconds, default: used from platform, if set to -1 than the ping mechanism will not be used)
+                "ignoreReEnterExitSeconds": 0  // (optional, in minutes, default: used from platform, if set to 0 than every enter/exit will trigger state change otherwise the state will only change if no re-enter/exit occurs in specified number of seconds)
+            },
+            {
+                "name" : "Gerda", 
+                "target" : "iphone-Gerda",
+                "threshold" : 15, // (optional, in minutes, default: used from platform
+                "pingInterval": 10000,  // (optional, in milliseconds, default: used from platform, if set to -1 than the ping mechanism will not be used)
+                "ignoreReEnterExitSeconds": 0  // (optional, in minutes, default: used from platform, if set to 0 than every enter/exit will trigger state change otherwise the state will only change if no re-enter/exit occurs in specified number of seconds)
+            }
+            {
+                "name" : "Inez", 
+                "target" : "iphone-Inez",
+                "threshold" : 15, // (optional, in minutes, default: used from platform
+                "pingInterval": 10000,  // (optional, in milliseconds, default: used from platform, if set to -1 than the ping mechanism will not be used)
+                "ignoreReEnterExitSeconds": 0  // (optional, in minutes, default: used from platform, if set to 0 than every enter/exit will trigger state change otherwise the state will only change if no re-enter/exit occurs in specified number of seconds)
+            }
+            {
+                "name" : "Diann", 
+                "target" : "iphone-Diann",
+                "threshold" : 15, // (optional, in minutes, default: used from platform
+                "pingInterval": 10000,  // (optional, in milliseconds, default: used from platform, if set to -1 than the ping mechanism will not be used)
+                "ignoreReEnterExitSeconds": 0  // (optional, in minutes, default: used from platform, if set to 0 than every enter/exit will trigger state change otherwise the state will only change if no re-enter/exit occurs in specified number of seconds)
+            }
+        ]
+        }
+    ],
+    "accessories": []
+}
