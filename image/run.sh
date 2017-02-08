@@ -13,7 +13,7 @@ else
 fi
 
 dbus-daemon --system
-avahi-daemon -D
+avahi-daemon --no-drop-root -D
 
 service dbus start
 service avahi-daemon start
