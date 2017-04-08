@@ -36,7 +36,7 @@ RUN npm install -g homebridge --unsafe-perm
 # there is an avahi daemon on this interface already
 # we created a macvlan interface for this container
 
-RUN sed -i 's/#deny-interfaces/deny-interfaces/' /etc/avahi/avahi-daemon.conf
+RUN sed -i 's/#deny-interfaces=eth1/deny-interfaces=eth0/' /etc/avahi/avahi-daemon.conf
 
 
 # depending on your config.json you have to add your modules here!
