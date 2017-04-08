@@ -32,6 +32,13 @@ RUN alias ll='ls -alG'
 
 RUN npm install -g homebridge --unsafe-perm
 
+# Disable avahi to run on eth0.
+# there is an avahi daemon on this interface already
+# we created a macvlan interface for this container
+
+RUN sed -i 's/#deny-interfaces/deny-interfaces/' /etc/avahi/avahi-daemon.conf
+
+
 # depending on your config.json you have to add your modules here!
 RUN npm install -g homebridge-people --unsafe-perm
 RUN npm install -g homebridge-mqtt --unsafe-perm
