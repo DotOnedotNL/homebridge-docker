@@ -44,6 +44,7 @@ RUN npm install -g homebridge-people --unsafe-perm
 RUN npm install -g homebridge-mqtt --unsafe-perm
 RUN npm install -g homebridge-mqttswitch --unsafe-perm
 RUN npm install -g homebridge-edomoticz --unsafe-perm
+RUN npm install -g homebridge-hue --unsafe-perm
 
 ##################################################
 # Start                                          #
